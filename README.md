@@ -14,6 +14,16 @@ WindTrace measures how accurate GB day-ahead wind forecasts were, comparing each
 
 React, TypeScript, Vite and Tailwind CSS on the frontend; FastAPI, Python and pandas on the backend; Docker for local containers.
 
+## Project Structure
+
+```text
+lkcf/
+├── backend/          # FastAPI backend and data processing (FastAPI, Python, pandas, Elexon API)
+├── frontend/         # React dashboard and UI components (React, TypeScript, Vite, Tailwind CSS)
+├── docker-compose.yml # Local Docker configuration
+├── .gitignore        # Files excluded from Git
+└── README.md         # Project documentation
+
 ## Data and methodology
 
 - **FUELHH** (`fuelType=WIND`) provides half-hourly actual wind generation.
@@ -65,7 +75,8 @@ Dashboard: http://localhost:3000. API docs: http://localhost:8000/docs.
 
 ## Links
 
-- Live demo: []
+- Frontend: `https://lkcf.vercel.app/`
+- Backend: `https://lkcf.onrender.com/`
 - Repository: `https://github.com/kobruhhhhh/lkcf`
 
 ### AI Disclosure
