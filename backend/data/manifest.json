@@ -1,0 +1,51 @@
+{
+  "analysis": {
+    "end": "2026-01-31",
+    "start": "2026-01-01",
+    "timezone": "Europe/London"
+  },
+  "combined_sha256": "9fd76341c6a883a25bc831c87be66370a185e74e16467310bb9b2dfc86d9e06e",
+  "created_at": "2026-10-24T06:07:35.973253Z",
+  "is_synthetic": false,
+  "product": "WindTrace",
+  "retrieval": {
+    "base_url": "https://data.elexon.co.uk/bmrs/api/v1",
+    "source": "Elexon BMRS Insights API"
+  },
+  "sources": {
+    "fuelhh": {
+      "dataset": "FUELHH",
+      "file": "fuelhh_wind_2026-01.json.gz",
+      "max_publish_time": "2026-02-02T00:00:00Z",
+      "max_start_time": "2026-02-01T23:30:00Z",
+      "min_publish_time": "2026-01-01T00:00:00Z",
+      "min_start_time": "2025-12-31T23:30:00Z",
+      "params": {
+        "fuelType": "WIND",
+        "publishDateTimeFrom": "2026-01-01T00:00:00Z",
+        "publishDateTimeTo": "2026-02-02T00:00:00Z"
+      },
+      "records": 1537,
+      "sha256": "f0d25d0feb11da5ee0a5dfe8b30888868d4d0a8bcdcc8b50bc04fbe9fa69e6b7",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream"
+    },
+    "windfor": {
+      "dataset": "WINDFOR",
+      "file": "windfor_publications_2026-01.json.gz",
+      "max_publish_time": "2026-02-01T22:30:00Z",
+      "max_start_time": "2026-02-03T21:00:00Z",
+      "min_publish_time": "2025-12-28T02:30:00Z",
+      "min_start_time": "2025-12-27T21:00:00Z",
+      "params": {
+        "publishDateTimeFrom": "2025-12-28T00:00:00Z",
+        "publishDateTimeTo": "2026-02-02T00:00:00Z"
+      },
+      "publications": 288,
+      "records": 21024,
+      "sha256": "e73052f2870d5db188eb339128b2a188923af847c68c689dd85c65104d253eea",
+      "url": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream"
+    }
+  },
+  "total_records": 22561,
+  "version": "1.0.0"
+}

@@ -1,0 +1,40 @@
+services:
+  api:
+    build:
+      context: ./backend
+    # Load local backend settings when present; missing files are allowed.
+    env_file:
+      - path: ./backend/.env
+        required: false
+    environment:
+      APP_ENV: production
+      # Overrides backend/.env so the Dockerised frontend on :3000 is allowed.
+      ALLOWED_ORIGINS: http://localhost:3000,http://127.0.0.1:3000
+      LOG_LEVEL: INFO
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=3)",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 60s
+    restart: unless-stopped
+
+  web:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: http://localhost:8000
+    ports:
+      - "3000:80"
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped

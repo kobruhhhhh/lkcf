@@ -1,0 +1,49 @@
+# Internal documentation, verification logs, screenshots and video scripts
+/docs/
+
+# Generated/offline data (snapshot files are recreated with scripts/fetch_snapshot.py)
+/backend/data/snapshot/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+build/
+*.egg-info/
+
+# Node / frontend build output
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files (templates are committed)
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
